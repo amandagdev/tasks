@@ -23,7 +23,7 @@ const checkStyles = ({ theme }) => css`
     content: '';
     width: 0.2rem;
     height: 0.5rem;
-    border: 0.2rem solid #13c0f0;
+    border: 0.2rem solid ${theme.colors.primary};
     border-top: 0;
     border-left: 0;
     bottom: 0.1rem;
