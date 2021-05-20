@@ -13,7 +13,6 @@ const CheckBox = ({ id = '', label, value, isChecked = false, onCheck }) => {
     }
   }
 
-  console.log(checked)
   return (
     <>
       <Check
