@@ -1,7 +1,8 @@
 import React from 'react'
 import CheckBox from '../components/checkBox'
 import Input from '../components/input'
-import { FaSearch } from 'react-icons/fa'
+import Button from '../components/button'
+import { FaSearch, FaTimes } from 'react-icons/fa'
 import { Base, Title, SubTitle, Container } from './styled'
 
 const Task = () => {
@@ -13,8 +14,11 @@ const Task = () => {
       <Title>tasks</Title>
       <SubTitle>very useful tools to remember</SubTitle>
       <Container>
-        <Input onChange={onChange} icon={<FaSearch />} />
-        <CheckBox id="search" label="search for tags" />
+        <div>
+          <Input onChange={onChange} icon={<FaSearch />} />
+          <CheckBox id="search" label="search for tags" />
+        </div>
+        <Button icon={<FaTimes color="black" size="18px" />}>add</Button>
       </Container>
     </Base>
   )

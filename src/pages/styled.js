@@ -20,6 +20,9 @@ const subTitleStyles = ({ theme }) => css`
 `
 
 const containerStyles = ({ theme }) => css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: ${theme.spacings.small} 0;
 `
 
