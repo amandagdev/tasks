@@ -1,13 +1,13 @@
 import React from 'react'
 import { Button as ButtonWrapper, Icon } from './styled.js'
 
-function Button({
+const Button = ({
   children,
   size = 'small',
   backgroundColor = 'salmon',
   icon,
   onClick
-}) {
+}) => {
   return (
     <ButtonWrapper
       size={size}

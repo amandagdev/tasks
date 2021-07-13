@@ -41,12 +41,12 @@ const buttonStyles = ({ backgroundColor, theme, size }) => css`
 
   ${size && wrapperModifiers[size](theme)}
 `
-const iconStyles = () => css`
+const iconStyles = ({ theme }) => css`
   display: flex;
   align-items: center;
 
   svg {
-    width: 100%;
+    margin-right: ${theme.spacings.small};
   }
 `
 

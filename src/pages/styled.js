@@ -7,6 +7,11 @@ const baseStyles = () => css`
   height: 100vh;
 `
 
+const containerStyles = () => css`
+  width: 100%;
+  margin: 0 auto;
+`
+
 const titleStyles = ({ theme }) => css`
   font-size: ${theme.font.heading.fontSize};
   line-height: ${theme.font.heading.lineHeight};
@@ -19,7 +24,7 @@ const subTitleStyles = ({ theme }) => css`
   padding-top: ${theme.spacings.small};
 `
 
-const containerStyles = ({ theme }) => css`
+const headerStyles = ({ theme }) => css`
   display: flex;
   align-items: center;
   padding: ${theme.spacings.small} 0;
@@ -41,7 +46,8 @@ const wrapperButtonStyles = () => css`
 `
 
 export const Base = styled('main')(baseStyles)
+export const Container = styled('section')(containerStyles)
 export const Title = styled('h1')(titleStyles)
 export const SubTitle = styled('h2')(subTitleStyles)
-export const Container = styled('div')(containerStyles)
+export const Header = styled('div')(headerStyles)
 export const WrapperButton = styled('div')(wrapperButtonStyles)
