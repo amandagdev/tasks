@@ -25,4 +25,4 @@ const titleStyles = ({ theme }) => css`
 
 export const Container = styled('div')(containerStyles)
 export const Header = styled('div')(headerStyles)
-export const Title = styled('div')(titleStyles)
+export const Title = styled('h3')(titleStyles)
