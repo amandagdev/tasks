@@ -22,11 +22,26 @@ const subTitleStyles = ({ theme }) => css`
 const containerStyles = ({ theme }) => css`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: ${theme.spacings.small} 0;
+  justify-content: space-between;
+  width: 100%;
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+
+  & input {
+    margin-left: ${theme.spacings.small};
+  }
+`
+
+const wrapperButtonStyles = () => css`
+  width: 10%;
 `
 
 export const Base = styled('main')(baseStyles)
 export const Title = styled('h1')(titleStyles)
 export const SubTitle = styled('h2')(subTitleStyles)
-export const Container = styled('section')(containerStyles)
+export const Container = styled('div')(containerStyles)
+export const WrapperButton = styled('div')(wrapperButtonStyles)

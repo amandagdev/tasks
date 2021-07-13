@@ -28,15 +28,15 @@ const wrapperModifiers = {
   `
 }
 
-const buttonStyles = ({ color, theme, size }) => css`
+const buttonStyles = ({ backgroundColor, theme, size }) => css`
   display: flex;
   align-items: center;
-  background: ${colors[color].default};
+  background: ${colors[backgroundColor].default};
   border-radius: 0.3rem;
   padding: ${theme.spacings.medium} ${theme.spacings.xlarge};
 
   &:hover {
-    background: ${colors[color].hover};
+    background: ${colors[backgroundColor].hover};
   }
 
   ${size && wrapperModifiers[size](theme)}

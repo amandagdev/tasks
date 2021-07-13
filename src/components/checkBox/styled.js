@@ -1,6 +1,13 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
+const WrapperStyles = ({ theme }) => css`
+  display: flex;
+  & label {
+    margin-left: ${theme.spacings.xsmall};
+  }
+`
+
 const labelStyles = () => css`
   cursor: pointer;
 `
@@ -44,6 +51,6 @@ const checkStyles = ({ theme }) => css`
   }
 `
 
+export const Wrapper = styled('div')(WrapperStyles)
 export const Label = styled('label')(labelStyles)
-
 export const Check = styled('input')(checkStyles)

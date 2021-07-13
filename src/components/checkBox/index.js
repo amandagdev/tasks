@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
-import { Label, Check } from './styled'
+import { Wrapper, Label, Check } from './styled'
 
 const CheckBox = ({ id = '', label, value, isChecked = false, onCheck }) => {
   const [checked, setChecked] = useState(isChecked)
@@ -14,7 +14,7 @@ const CheckBox = ({ id = '', label, value, isChecked = false, onCheck }) => {
   }
 
   return (
-    <>
+    <Wrapper>
       <Check
         id={id}
         type="checkbox"
@@ -23,7 +23,7 @@ const CheckBox = ({ id = '', label, value, isChecked = false, onCheck }) => {
         value={value}
       />
       {label && <Label htmlFor={id}>{label}</Label>}
-    </>
+    </Wrapper>
   )
 }
 

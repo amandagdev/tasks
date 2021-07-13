@@ -3,7 +3,7 @@ import CheckBox from '../components/checkBox'
 import Input from '../components/input'
 import Button from '../components/button'
 import { FaSearch, FaTimes } from 'react-icons/fa'
-import { Base, Title, SubTitle, Container } from './styled'
+import { Base, Title, SubTitle, Container, WrapperButton } from './styled'
 
 const Task = () => {
   const onChange = (a) => {
@@ -18,7 +18,14 @@ const Task = () => {
           <Input onChange={onChange} icon={<FaSearch />} />
           <CheckBox id="search" label="search for tags" />
         </div>
-        <Button icon={<FaTimes color="black" size="18px" />}>add</Button>
+        <WrapperButton>
+          <Button
+            icon={<FaTimes color="black" size="18px" />}
+            onClick={onChange}
+          >
+            add
+          </Button>
+        </WrapperButton>
       </Container>
     </Base>
   )
