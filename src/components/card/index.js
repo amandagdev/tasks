@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button'
-import { Container, Header, Title } from './styled.js'
+import Tag from '../tag'
+import { Container, Header, Title, Footer } from './styled.js'
 
 const Card = ({ children, title, textButton, ...props }) => {
   return (
@@ -10,6 +11,21 @@ const Card = ({ children, title, textButton, ...props }) => {
         {textButton && <Button {...props}> {textButton} </Button>}
       </Header>
       {children}
+      <Footer>
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+        <Tag tag="planning" />
+      </Footer>
     </Container>
   )
 }

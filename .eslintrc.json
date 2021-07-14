@@ -21,6 +21,7 @@
   "plugins": ["react", "react-hooks"],
   "rules": {
     "no-console": 0,
+    "no-unused-vars": "off",
     "quotes": ["error", "single"],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".js"] }],

@@ -3,7 +3,7 @@ import CheckBox from '../components/checkBox'
 import Input from '../components/input'
 import Button from '../components/button'
 import Card from '../components/card'
-import { FaSearch, FaTimes, FaClosedCaptioning } from 'react-icons/fa'
+import { FaSearch, FaTimes, FaCheck } from 'react-icons/fa'
 import {
   Base,
   Title,
@@ -29,7 +29,7 @@ const Task = () => {
           </div>
           <WrapperButton>
             <Button
-              icon={<FaTimes color="black" size="18px" />}
+              icon={<FaCheck color="black" size="18px" />}
               onClick={onChange}
             >
               add
@@ -39,7 +39,8 @@ const Task = () => {
         <Card
           title="Notion"
           textButton="remover"
-          icon={<FaClosedCaptioning />}
+          backgroundColor="none"
+          icon={<FaTimes color="black" size="18px" />}
         />
       </Container>
     </Base>
