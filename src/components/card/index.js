@@ -10,7 +10,7 @@ const Card = ({ children, title, textButton, ...props }) => {
         <Title>{title}</Title>
         {textButton && <Button {...props}> {textButton} </Button>}
       </Header>
-      {children}
+      <Footer>{children}</Footer>
       <Footer>
         <Tag tag="planning" />
         <Tag tag="planning" />

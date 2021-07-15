@@ -4,11 +4,12 @@ import styled from '@emotion/styled'
 const containerStyles = ({ theme }) => css`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   border: 1px solid ${theme.colors.gray};
   border-radius: 0.3rem;
   padding: ${theme.spacings.small};
   position: relative;
-  height: 9.375rem;
+  min-height: 12rem;
   width: 100%;
 `
 
@@ -28,8 +29,6 @@ const footerStyles = () => css`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 `
 

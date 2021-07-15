@@ -3,6 +3,7 @@ import CheckBox from '../components/checkBox'
 import Input from '../components/input'
 import Button from '../components/button'
 import Card from '../components/card'
+import Modal from '../components/modal'
 import { FaSearch, FaTimes, FaCheck } from 'react-icons/fa'
 import {
   Base,
@@ -41,7 +42,13 @@ const Task = () => {
           textButton="remover"
           backgroundColor="none"
           icon={<FaTimes color="black" size="18px" />}
-        />
+        >
+          a apresentção então dizia que tudo isso tinha uma unica explicação
+          romam! a apresentção então dizia que tudo isso tinha uma unica
+          explicação romam! a apresentção então dizia que tudo isso tinha uma
+          unica explicação romam!
+        </Card>
+        <Modal icon={<FaCheck color="black" />} />
       </Container>
     </Base>
   )
