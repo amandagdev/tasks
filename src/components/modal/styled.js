@@ -3,12 +3,12 @@ import styled from '@emotion/styled'
 
 const sizes = {
   small: () => css`
-    width: 30rem;
+    width: 20rem;
     height: 10rem;
   `,
   medium: () => css`
-    width: 40rem;
-    height: 40rem;
+    width: 35rem;
+    height: 35rem;
   `
 }
 
