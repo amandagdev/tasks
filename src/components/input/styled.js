@@ -5,6 +5,7 @@ const inputWrapperStyles = ({ theme }) => css`
   display: flex;
   border: 1px solid ${theme.colors.gray};
   border-radius: 0.3rem;
+  margin-top: ${theme.spacings.xxsmall};
 
   &:focus-within {
     box-shadow: 0 0 0.5rem ${theme.colors.gray};

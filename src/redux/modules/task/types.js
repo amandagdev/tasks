@@ -1,3 +1,0 @@
-export default {
-  GET_TASKS_SUCCESS_SAGA: 'GET_TASKS_SUCCESS'
-}

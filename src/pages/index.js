@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CheckBox from '../components/checkBox'
 import Input from '../components/input'
 import Button from '../components/button'
@@ -11,13 +11,22 @@ import {
   SubTitle,
   Container,
   Header,
-  WrapperButton
+  WrapperButton,
+  WrapperModal,
+  WrapperText
 } from './styled'
 
 const Task = () => {
+  const [visible, setVisible] = useState(false)
+
   const onChange = (a) => {
     console.log(a)
   }
+
+  const modalShow = () => {
+    setVisible((show) => !show)
+  }
+
   return (
     <Base>
       <Title>tasks</Title>
@@ -31,7 +40,7 @@ const Task = () => {
           <WrapperButton>
             <Button
               icon={<FaCheck color="black" size="18px" />}
-              onClick={onChange}
+              onClick={modalShow}
             >
               add
             </Button>
@@ -48,7 +57,24 @@ const Task = () => {
           explicação romam! a apresentção então dizia que tudo isso tinha uma
           unica explicação romam!
         </Card>
-        <Modal icon={<FaCheck color="black" />} />
+        {visible && (
+          <>
+            <Modal icon={<FaCheck color="black" />}>
+              <WrapperModal>
+                <Input label="Tool name" onChange={onChange} />
+                <Input label="Tool link" onChange={onChange} />
+                <WrapperText>
+                  <p>Tool description</p>
+                  <textarea rows="5" cols="65" />
+                </WrapperText>
+                <Input label="Tags" onChange={onChange} />
+                <span>
+                  <Button onClick={modalShow}>add tool</Button>
+                </span>
+              </WrapperModal>
+            </Modal>
+          </>
+        )}
       </Container>
     </Base>
   )

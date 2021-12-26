@@ -1,13 +1,7 @@
-import { createStore, compose, applyMiddleware } from 'redux'
-import combineReducer from './reducer'
-import createSaga from 'redux-saga'
-import sagas from './sagas'
+import { configureStore, getGetDefaultMiddleware } from '@reduxjs/toolkit'
+import task from './reducer'
+import logger from './middleware/logger'
 
-const sagaMiddleware = createSaga(sagas)
+const middleware = [...getGetDefaultMiddleware(), logger]
 
-export default createStore(
-  combineReducer,
-  compose(applyMiddleware(sagaMiddleware))
-)
-
-sagaMiddleware.run(sagas)
+export default configureStore({ reducer: task, middleware })

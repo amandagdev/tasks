@@ -45,9 +45,30 @@ const wrapperButtonStyles = () => css`
   width: 10%;
 `
 
+const wrapperModalStyles = ({ theme }) => css`
+  padding: 1.5rem;
+
+  & div {
+    margin-bottom: ${theme.spacings.xlarge};
+  }
+
+  & span {
+    display: flex;
+    justify-content: end;
+  }
+`
+
+const wrapperTextAreaStyles = ({ theme }) => css`
+  & p {
+    margin-bottom: ${theme.spacings.xxsmall};
+  }
+`
+
 export const Base = styled('main')(baseStyles)
 export const Container = styled('section')(containerStyles)
 export const Title = styled('h1')(titleStyles)
 export const SubTitle = styled('h2')(subTitleStyles)
 export const Header = styled('div')(headerStyles)
 export const WrapperButton = styled('div')(wrapperButtonStyles)
+export const WrapperModal = styled('div')(wrapperModalStyles)
+export const WrapperText = styled('div')(wrapperTextAreaStyles)

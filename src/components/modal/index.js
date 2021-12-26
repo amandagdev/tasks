@@ -8,7 +8,6 @@ const Modal = ({
   children,
   ...props
 }) => {
-  console.log('testeteste')
   return (
     <Overlay>
       <ModalWrapper size={size}>
